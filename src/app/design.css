@@ -76,3 +76,5 @@ a:hover{color:#255BD9}
 .two{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start}
 .two > .main{flex:999 1 560px;min-width:0}
 .two > .side{flex:1 1 300px;min-width:0}
+@media (max-width:640px){article:has(> .perf-v){flex-direction:column !important}article>.perf-v{flex:0 0 auto !important;flex-direction:row !important;align-items:center !important;justify-content:space-between !important;border-left:0;border-top:2px dashed rgba(10,22,48,.22);padding:14px 20px !important}article>.perf-v>div{display:flex;align-items:baseline;gap:8px;text-align:left !important}article>.perf-v .disp{font-size:30px !important}}
+div:has(> h2.disp + span.mono){flex-wrap:wrap;gap:6px 12px}
