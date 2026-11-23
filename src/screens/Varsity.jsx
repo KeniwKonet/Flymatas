@@ -21,8 +21,8 @@ class Logic {
         { name: 'Visa Application & Form Filling', dur: '[WEEKS]', mode: '[MODE]', bg: '#FFE1E7', icon: 'M6 3h9l4 4v14H6zM14 3v5h5M9 13h7M9 17h5', body: 'Build complete, consistent visa files and fill embassy forms without costly mistakes.' },
         { name: 'Air Hostess Training', dur: '[WEEKS]', mode: '[MODE]', bg: '#DDF3FF', icon: 'M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z', body: 'Grooming, safety basics, service and interview preparation for cabin crew roles.' },
         { name: 'Destination Specialist', dur: '[WEEKS]', mode: '[MODE]', bg: '#E8ECF5', icon: 'M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12zM12 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z', body: 'Know a destination deeply enough to plan, sell and support trips there.' },
-        { name: 'Travel Agency Management', dur: '12 weeks', mode: 'Akure campus', bg: '#DCE6FA', icon: 'M4 8h16v11H4zM9 8V5h6v3M4 13h16', body: 'Career switch: become a professional travel agency management expert, with an internationally recognised certificate.' },
-        { name: 'Tour Packages Masterclass', dur: '7 days', mode: 'Akure campus', bg: '#FFE1E7', icon: 'M3 20l6-10 4 6 2-3 6 7H3z', body: 'An intensive masterclass for graduates that adds real value to a BSc, HND or MSc.' }
+        { name: 'Travel Agency Management', dur: '12 weeks', mode: 'Online', bg: '#DCE6FA', icon: 'M4 8h16v11H4zM9 8V5h6v3M4 13h16', body: 'Career switch: become a professional travel agency management expert, with an internationally recognised certificate.' },
+        { name: 'Tour Packages Masterclass', dur: '7 days', mode: 'Online', bg: '#FFE1E7', icon: 'M3 20l6-10 4 6 2-3 6 7H3z', body: 'An intensive masterclass for graduates that adds real value to a BSc, HND or MSc.' }
       ],
       who: [
         { t: 'Industry experts', b: 'Programmes built by seasoned travel professionals who share what really works.' },
@@ -296,7 +296,7 @@ export default function VarsityScreen(props) {
               </h2>
             </div>
             <p style={{ "margin": "0", "maxWidth": "400px", "color": "#4D555E", "fontSize": "16px", "lineHeight": "1.6" }}>
-              Campus: Ijapo Estate, opposite Ijapo Field, CJM, Akure, Ondo State.
+              Fully online: learn from anywhere, on any device, at your own pace.
             </p>
           </div>
           <div className="g3">

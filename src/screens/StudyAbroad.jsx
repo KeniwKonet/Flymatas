@@ -526,9 +526,6 @@ export default function StudyAbroadScreen(props) {
               <Link className="btn" href="/book" style={{ "background": "transparent", "color": "#fff", "border": "1px solid rgba(255,255,255,.6)" }}>
                 Start my application
               </Link>
-              <Link className="btn" href="/book" style={{ "background": "transparent", "color": "#fff", "border": "1px solid rgba(255,255,255,.6)" }}>
-                Start my application
-              </Link>
             </div>
           </div>
         </section>

@@ -503,9 +503,6 @@ export default function DestinationUKScreen(props) {
               <Link className="btn" href="/book" style={{ "background": "transparent", "color": "#fff", "border": "1px solid rgba(255,255,255,.6)" }}>
                 Book this route
               </Link>
-              <Link className="btn" href="/book" style={{ "background": "transparent", "color": "#fff", "border": "1px solid rgba(255,255,255,.6)" }}>
-                Book this route
-              </Link>
             </div>
           </div>
         </section>

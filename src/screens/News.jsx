@@ -412,7 +412,7 @@ export default function NewsScreen(props) {
                       Tour Packages Masterclass for graduates
                     </span>
                     <span style={{ "color": "#4D555E", "fontSize": "15px", "lineHeight": "1.55" }}>
-                      Seven days of intensive training that adds real value to a BSc, HND or MSc. At the Akure campus.
+                      Seven days of intensive training that adds real value to a BSc, HND or MSc.
                     </span>
                     <span style={{ "marginTop": "auto", "paddingTop": "6px", "fontWeight": "600", "color": "#255BD9", "display": "flex", "alignItems": "center", "gap": "8px" }}>
                       {"Read more "}
