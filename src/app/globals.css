@@ -1,0 +1,18 @@
+/* Tailwind theme and utilities. Preflight is left out on purpose so the design styles render exactly as designed. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "./design.css";
+
+@theme {
+  --color-brand-pink: #FD6886;
+  --color-brand-blue: #255BD9;
+  --color-brand-sky: #86D5FF;
+  --color-brand-night: #0F1518;
+  --color-brand-gray: #808080;
+  --color-brand-white: #FDFDFA;
+  --color-varsity-cyan: #2CCBF5;
+  --color-varsity-amber: #F5B82C;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Martian Mono", ui-monospace, monospace;
+}
