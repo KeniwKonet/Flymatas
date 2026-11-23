@@ -231,34 +231,38 @@ export default function MainScreen(props) {
                 Book on WhatsApp
               </a>
             </div>
-            <button className="mob btn" type="button" aria-label="Open menu" onClick={v.toggleMenu} style={{ "background": "rgba(255,255,255,.18)", "color": "#fff", "width": "48px", "padding": "0" }}>
-              {" "}
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+            <button className="mob btn" type="button" aria-label="Menu" aria-expanded={v.menuOpen} onClick={v.toggleMenu} style={{ "background": "rgba(255,255,255,.18)", "color": "#fff", "width": "48px", "padding": "0" }}>
+              <svg className="i-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
                 <path d="M4 7h16M4 12h16M4 17h16"></path>
               </svg>
-              {" "}
+              <svg className="i-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+                <path d="M6 6l12 12M18 6L6 18"></path>
+              </svg>
             </button>
           </header>
           {v.menuOpen ? (
             <>
-              <nav aria-label="Mobile" className="wrap" style={{ "position": "relative", "zIndex": "6", "display": "flex", "flexDirection": "column", "gap": "4px", "paddingBottom": "16px" }}>
-                <Link className="navlink" href="/study-abroad">
-                  Study
-                </Link>
-                <Link className="navlink" href="/work-abroad">
-                  Work
-                </Link>
-                <Link className="navlink" href="/visa">
-                  Visa
+              <nav aria-label="Mobile" className="wrap mnav">
+                <Link className="navlink" href="/">
+                  Home
                 </Link>
                 <Link className="navlink" href="/destinations">
                   Destinations
                 </Link>
+                <Link className="navlink" href="/study-abroad">
+                  Study abroad
+                </Link>
+                <Link className="navlink" href="/work-abroad">
+                  Work abroad
+                </Link>
+                <Link className="navlink" href="/visa">
+                  Visa help
+                </Link>
                 <Link className="navlink" href="/varsity">
-                  Varsity
+                  Aviation Varsity
                 </Link>
                 <Link className="navlink" href="/guides">
-                  Guides
+                  Free guides
                 </Link>
                 <Link className="navlink" href="/news">
                   News
@@ -269,8 +273,19 @@ export default function MainScreen(props) {
                 <Link className="navlink" href="/contact">
                   Contact
                 </Link>
-                <a className="btn" href="https://wa.me/2347033221729" style={{ "background": "#FD6886", "color": "#0F1518", "marginTop": "8px" }}>
-                  Book on WhatsApp
+                <div className="mnav-acc">
+                  <Link href="/account">
+                    Log in
+                  </Link>
+                  <Link href="/account/trips">
+                    My trips
+                  </Link>
+                </div>
+                <Link className="btn" href="/book" style={{ "background": "#FD6886", "color": "#0F1518" }}>
+                  Plan my trip
+                </Link>
+                <a className="btn" href="https://wa.me/2347033221729" style={{ "background": "transparent", "color": "#fff", "border": "1px solid #3A454D" }}>
+                  Chat on WhatsApp
                 </a>
               </nav>
             </>
@@ -1305,6 +1320,28 @@ export default function MainScreen(props) {
             </div>
           </div>
         </footer>
+        <div className="mbar" role="region" aria-label="Quick actions">
+          <button type="button" className="mbar-menu" aria-expanded={v.menuOpen} aria-label="Menu" onClick={v.toggleMenu}>
+            <svg className="i-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16"></path>
+            </svg>
+            <svg className="i-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+              <path d="M6 6l12 12M18 6L6 18"></path>
+            </svg>
+            <span>
+              Menu
+            </span>
+          </button>
+          <Link className="mbar-plan" href="/book">
+            Plan my trip
+          </Link>
+          <a className="mbar-wa" href="https://wa.me/2347033221729" aria-label="Chat on WhatsApp">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.3L3 21z"></path>
+              <path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-2-1-1 .8a4 4 0 0 1-2.1-2.1l.8-1-1-2L9 9.5z"></path>
+            </svg>
+          </a>
+        </div>
       </div>
     </>
   );

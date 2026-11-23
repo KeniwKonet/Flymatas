@@ -74,32 +74,38 @@ export default function NotFoundScreen(props) {
                 Book a clarity call
               </Link>
             </div>
-            <button className="mob btn" type="button" aria-label="Open menu" onClick={v.toggleMenu} style={{ "background": "rgba(255,255,255,.18)", "color": "#fff", "width": "48px", "padding": "0" }}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <button className="mob btn" type="button" aria-label="Menu" aria-expanded={v.menuOpen} onClick={v.toggleMenu} style={{ "background": "rgba(255,255,255,.18)", "color": "#fff", "width": "48px", "padding": "0" }}>
+              <svg className="i-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
                 <path d="M4 7h16M4 12h16M4 17h16"></path>
+              </svg>
+              <svg className="i-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+                <path d="M6 6l12 12M18 6L6 18"></path>
               </svg>
             </button>
           </header>
           {v.menuOpen ? (
             <>
-              <nav aria-label="Mobile" className="wrap" style={{ "position": "relative", "zIndex": "6", "display": "flex", "flexDirection": "column", "gap": "4px", "paddingBottom": "16px" }}>
+              <nav aria-label="Mobile" className="wrap mnav">
+                <Link className="navlink" href="/">
+                  Home
+                </Link>
                 <Link className="navlink" href="/destinations">
                   Destinations
                 </Link>
                 <Link className="navlink" href="/study-abroad">
-                  Study
+                  Study abroad
                 </Link>
                 <Link className="navlink" href="/work-abroad">
-                  Work
+                  Work abroad
                 </Link>
                 <Link className="navlink" href="/visa">
-                  Visa
+                  Visa help
                 </Link>
                 <Link className="navlink" href="/varsity">
-                  Varsity
+                  Aviation Varsity
                 </Link>
                 <Link className="navlink" href="/guides">
-                  Guides
+                  Free guides
                 </Link>
                 <Link className="navlink" href="/news">
                   News
@@ -110,12 +116,20 @@ export default function NotFoundScreen(props) {
                 <Link className="navlink" href="/contact">
                   Contact
                 </Link>
-                <Link className="navlink" href="/account">
-                  Log in
-                </Link>
-                <Link className="btn" href="/book" style={{ "background": "#FD6886", "color": "#0F1518", "marginTop": "8px" }}>
+                <div className="mnav-acc">
+                  <Link href="/account">
+                    Log in
+                  </Link>
+                  <Link href="/account/trips">
+                    My trips
+                  </Link>
+                </div>
+                <Link className="btn" href="/book" style={{ "background": "#FD6886", "color": "#0F1518" }}>
                   Plan my trip
                 </Link>
+                <a className="btn" href="https://wa.me/2347033221729" style={{ "background": "transparent", "color": "#fff", "border": "1px solid #3A454D" }}>
+                  Chat on WhatsApp
+                </a>
               </nav>
             </>
           ) : null}
@@ -175,6 +189,28 @@ export default function NotFoundScreen(props) {
             <path d="M0 120 L0 86 L60 86 L60 70 L92 70 L92 86 L150 86 L150 52 L172 52 L172 86 L240 86 L262 64 L284 86 L380 86 L380 60 L398 44 L416 60 L416 86 L520 86 L520 74 L600 74 L600 86 L700 86 L700 40 L716 40 L716 86 L820 86 L840 66 L860 86 L960 86 L960 58 L1000 58 L1000 86 L1100 86 L1100 72 L1160 72 L1160 86 L1260 86 L1280 50 L1300 86 L1440 86 L1440 120 Z" fill="#FDFDFA"></path>
           </svg>
         </section>
+        <div className="mbar" role="region" aria-label="Quick actions">
+          <button type="button" className="mbar-menu" aria-expanded={v.menuOpen} aria-label="Menu" onClick={v.toggleMenu}>
+            <svg className="i-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16"></path>
+            </svg>
+            <svg className="i-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+              <path d="M6 6l12 12M18 6L6 18"></path>
+            </svg>
+            <span>
+              Menu
+            </span>
+          </button>
+          <Link className="mbar-plan" href="/book">
+            Plan my trip
+          </Link>
+          <a className="mbar-wa" href="https://wa.me/2347033221729" aria-label="Chat on WhatsApp">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.3L3 21z"></path>
+              <path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-2-1-1 .8a4 4 0 0 1-2.1-2.1l.8-1-1-2L9 9.5z"></path>
+            </svg>
+          </a>
+        </div>
       </div>
     </>
   );
